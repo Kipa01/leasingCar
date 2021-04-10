@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Leasing Car</title>
+   <meta name="description"
+         content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores blanditiis consequuntur eius fugiat fugit impedit minus, quam quia quos rem repudiandae totam, vitae voluptate. A aliquid consectetur delectus doloremque doloribus ipsum labore provident quasi repellat temporibus. Beatae consequatur fugiat, hic illum, porro praesentium quas quasi reprehenderit similique, suscipit veniam voluptas!"/>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="./images/logo.svg" type="image/svg">
+</head>
+
+<body>
+<header class="header">
+   <div class="header__container container">
+      <a href="#" class="header__logo logo">
+         <svg class="logo__image" width="200" height="35" viewBox="0 0 200 35" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 27.1001H18.6313V21.0779H6.21045V1.88195H0V27.1001Z" fill="#FF9514"/>
+            <path
+               d="M29.2356 7.71601C23.4391 7.71601 19.3741 12.0445 19.3741 17.6904C19.3741 22.9598 22.6864 27.6647 29.1226 27.6647C33.6017 27.6647 37.4785 25.3687 38.683 21.0779H32.6231C32.0209 22.0189 30.4776 22.6211 29.0474 22.5082C26.8643 22.32 25.6222 21.0402 25.2458 19.61H38.7959C39.5487 12.7596 35.5213 7.71601 29.2356 7.71601ZM29.1979 12.8349C31.0422 12.8349 32.5102 13.7006 33.0371 15.2815H25.3211C25.848 13.7759 27.316 12.8349 29.1979 12.8349Z"
+               fill="#FF9514"/>
+            <path
+               d="M54.7842 10.5766H54.6337C53.5045 8.9581 51.4344 7.71601 48.8373 7.71601C43.6807 7.71601 40.1427 11.9692 40.1427 17.7656C40.1427 23.7126 43.9066 27.6647 48.8373 27.6647C51.4344 27.6647 53.5045 26.4226 54.6337 24.8041H54.7842V27.1001H60.5807V8.2806H54.7842V10.5766ZM50.4181 22.1694C47.9339 22.1694 46.052 20.3251 46.052 17.6904C46.052 15.0556 47.9339 13.2113 50.4181 13.2113C52.9399 13.2113 54.7842 15.1309 54.7842 17.6904C54.7842 20.1369 53.0152 22.1694 50.4181 22.1694Z"
+               fill="#FF9514"/>
+            <path
+               d="M68.928 8.2806C65.3147 8.2806 62.4917 10.6519 62.4917 14.077C62.4917 16.6365 64.4866 18.5937 67.2719 19.1959L74.1222 20.6638C74.3857 20.7391 74.461 20.9273 74.461 21.0779C74.461 21.2661 74.3104 21.4543 74.0469 21.4543H63.2822V27.1001H74.0846C77.6979 27.1001 80.5961 24.6912 80.5961 21.2284C80.5961 18.5561 78.6765 16.5612 75.7783 15.9966L69.0409 14.6792C68.8527 14.6416 68.7022 14.4534 68.7022 14.3028C68.7022 14.1146 68.8527 13.9265 69.1162 13.9265H79.2411V8.2806H68.928Z"
+               fill="#FF9514"/>
+            <path d="M82.5095 0V6.21045H88.3436V0H82.5095ZM82.5095 8.2806V27.1001H88.3436V8.2806H82.5095Z"
+                  fill="#FF9514"/>
+            <path
+               d="M102.767 7.75365C100.66 7.75365 98.6646 8.69462 97.4226 10.426H97.272V8.2806H91.5885V27.1001H97.4226V17.1634C97.4226 14.8298 99.2292 13.5124 100.961 13.5124C102.504 13.5124 104.122 14.5663 104.122 16.9752V27.1001H109.956V16.1848C109.956 10.6895 107.246 7.75365 102.767 7.75365Z"
+               fill="#FF9514"/>
+            <path
+               d="M126.35 10.5766H126.199C125.07 8.9581 123 7.71601 120.403 7.71601C115.246 7.71601 111.708 11.9692 111.708 17.7656C111.708 23.7126 115.472 27.6647 120.403 27.6647C123 27.6647 125.07 26.4226 126.199 24.8041H126.35V27.5518C126.35 28.3046 125.785 28.7562 124.995 28.7562H114.193V34.6279H126.425C130.039 34.6279 132.146 32.6707 132.146 29.095V8.2806H126.35V10.5766ZM121.984 22.1694C119.5 22.1694 117.618 20.3251 117.618 17.6904C117.618 15.0556 119.5 13.2113 121.984 13.2113C124.506 13.2113 126.35 15.1309 126.35 17.6904C126.35 20.1369 124.581 22.1694 121.984 22.1694Z"
+               fill="#FF9514"/>
+            <path
+               class="logo-path"
+               d="M154.223 16.5988C153.546 19.6476 151.062 21.5672 147.712 21.5672C143.308 21.5672 140.937 18.2173 140.937 14.4911C140.937 10.6895 143.346 7.49019 147.636 7.41491C151.062 7.33963 153.358 9.33451 154.073 12.1198H160.509C159.794 6.05991 154.825 1.31738 147.712 1.31738C139.732 1.31738 134.613 7.26436 134.613 14.5663C134.613 21.793 139.732 27.6647 147.712 27.6647C155.014 27.6647 159.944 22.8846 160.584 16.5988H154.223Z"
+               fill="#111111"/>
+            <path
+               class="logo-path"
+               d="M176.633 10.5766H176.483C175.354 8.95811 173.284 7.71602 170.687 7.71602C165.53 7.71602 161.992 11.9692 161.992 17.7657C161.992 23.7126 165.756 27.6647 170.687 27.6647C173.284 27.6647 175.354 26.4226 176.483 24.8042H176.633V27.1001H182.43V8.28061H176.633V10.5766ZM172.267 22.1694C169.783 22.1694 167.901 20.3251 167.901 17.6904C167.901 15.0556 169.783 13.2113 172.267 13.2113C174.789 13.2113 176.633 15.1309 176.633 17.6904C176.633 20.1369 174.864 22.1694 172.267 22.1694Z"
+               fill="#111111"/>
+            <path
+               class="logo-path"
+               d="M195.323 8.28061C193.403 8.28061 191.86 9.40978 191.333 11.1035H191.182V8.28061H185.65V27.1001H191.484V17.5775C191.484 15.5826 192.951 14.1147 194.946 14.1147H199.501V8.28061H195.323Z"
+               fill="#111111"/>
+         </svg>
+         <div class="logo__separator"></div>
+         <span class="logo__text">
+            лизинговая компания
+         </span>
+      </a>
+      <nav class="header__nav nav">
+         <div class="nav__body">
+            <ul class="nav__list list-nav">
+               <li class="list-nav__item list-nav__item--drop">
+                  <a href="#" target="_blank" class="list-nav__link">
+                     Лизинг
+                  </a>
+                  <ul class="list-nav__drop nav-drop">
+                     <div class="nav-drop__body">
+                        <li class="nav-drop__item">
+                           <a href="#" target="_blank" class="nav-drop__link">
+                              Для личного пользования
+                           </a>
+                        </li>
+                        <li class="nav-drop__item">
+                           <a href="#" target="_blank" class="nav-drop__link">
+                              Для юридических диц
+                           </a>
+                        </li>
+                        <li class="nav-drop__item">
+                           <a href="#" target="_blank" class="nav-drop__link">
+                              Калькулятор
+                           </a>
+                        </li>
+                     </div>
+                  </ul>
+               </li>
+               <li class="list-nav__item">
+                  <a href="#" target="_blank" class="list-nav__link">
+                     Каталог
+                  </a>
+               </li>
+               <li class="list-nav__item">
+                  <a href="#" target="_blank" class="list-nav__link">
+                     О нас
+                  </a>
+               </li>
+            </ul>
+            <div class="nav__btn btn">
+               Оставить заявку
+            </div>
+         </div>
+      </nav>
+      <div class="header__burger burger">
+         <div class="burger__item burger__item--first"></div>
+         <div class="burger__item burger__item--second"></div>
+         <div class="burger__item burger__item--third"></div>
+      </div>
+   </div>
+</header>
+<main class="main">
+   <div class="container">
+      <div class="main-slider swiper-container">
+         <div class="main-slider__wrapper swiper-wrapper">
+            <div class="main-slider__slide swiper-slide">
+               <div class="main-slider__image">
+                  <img src="images/slider-bg.jpg" alt="car" title="car">
+                  <img src="images/slider-bg-768.jpg" alt="car" title="car">
+               </div>
+               <div class="main-slider__content">
+                  <h1 class="main-slider__title title">
+                     Авто в лизинг для физических лиц
+                  </h1>
+                  <h4 class="main-slider__subtitle">
+                     Получите машину за 5 дней
+                  </h4>
+                  <div class="main-slider__btn btn">
+                     Оставить заявку
+                  </div>
+               </div>
+            </div>
+            <div class="main-slider__slide swiper-slide">
+               <div class="main-slider__image">
+                  <img src="images/slider-bg.jpg" alt="car" title="car">
+                  <img src="images/slider-bg-768.jpg" alt="car" title="car">
+               </div>
+               <div class="main-slider__content">
+                  <h3 class="main-slider__title title">
+                     Авто в лизинг для физических лиц
+                  </h3>
+                  <h4 class="main-slider__subtitle">
+                     Получите машину за 10 дней
+                  </h4>
+                  <div class="main-slider__btn btn disabled">
+                     Оставить заявку
+                  </div>
+               </div>
+            </div>
+            <div class="main-slider__slide swiper-slide">
+               <div class="main-slider__image">
+                  <img src="images/slider-bg.jpg" alt="car" title="car">
+                  <img src="images/slider-bg-768.jpg" alt="car" title="car">
+               </div>
+               <div class="main-slider__content">
+                  <h3 class="main-slider__title title">
+                     Авто в лизинг для физических лиц
+                  </h3>
+                  <h4 class="main-slider__subtitle">
+                     Получите машину за 5 дней
+                  </h4>
+                  <div class="main-slider__btn btn">
+                     Оставить заявку
+                  </div>
+               </div>
+            </div>
+            <div class="main-slider__slide swiper-slide">
+               <div class="main-slider__image">
+                  <img src="images/slider-bg.jpg" alt="car" title="car">
+                  <img src="images/slider-bg-768.jpg" alt="car" title="car">
+               </div>
+               <div class="main-slider__content">
+                  <h3 class="main-slider__title title">
+                     Авто в лизинг для физических лиц
+                  </h3>
+                  <h4 class="main-slider__subtitle">
+                     Получите машину за 10 дней
+                  </h4>
+                  <div class="main-slider__btn btn">
+                     Оставить заявку
+                  </div>
+               </div>
+            </div>
+            <div class="main-slider__slide swiper-slide">
+               <div class="main-slider__image">
+                  <img src="images/slider-bg.jpg" alt="car" title="car">
+                  <img src="images/slider-bg-768.jpg" alt="car" title="car">
+               </div>
+               <div class="main-slider__content">
+                  <h3 class="main-slider__title title">
+                     Авто в лизинг для физических лиц
+                  </h3>
+                  <h4 class="main-slider__subtitle">
+                     Получите машину за 5 дней
+                  </h4>
+                  <div class="main-slider__btn btn">
+                     Оставить заявку
+                  </div>
+               </div>
+            </div>
+            <div class="main-slider__slide swiper-slide">
+               <div class="main-slider__image">
+                  <img src="images/slider-bg.jpg" alt="car" title="car">
+                  <img src="images/slider-bg-768.jpg" alt="car" title="car">
+               </div>
+               <div class="main-slider__content">
+                  <h3 class="main-slider__title title">
+                     Авто в лизинг для физических лиц
+                  </h3>
+                  <h4 class="main-slider__subtitle">
+                     Получите машину за 10 дней
+                  </h4>
+                  <div class="main-slider__btn btn">
+                     Оставить заявку
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="main-slider__pagination swiper-pagination"></div>
+         <div class="main-slider__button main-slider__buttonNext swiper-button-next active">
+            <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M1 1L9 9L1 17" stroke="white" stroke-width="2"/>
+            </svg>
+         </div>
+         <div class="main-slider__button main-slider__buttonPrev swiper-button-prev">
+            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M5.5 1L1.5 5L5.5 9" stroke="white" stroke-width="2"/>
+            </svg>
+         </div>
+      </div>
+      <div class="calculator">
+         <h3 class="calculator__title title">
+            Рассчитайте стоимость автомобиля в лизинг
+         </h3>
+         <div class="calculator__body">
+            <div class="calculator__row">
+               <div class="calculator__item">
+                  <div class="calculator__label">
+                     Стоимость автомобиля
+                  </div>
+                  <div class="calculator__input input-calculator">
+                     <div class="input-calculator__val">
+                        <div>
+                           <input type="number" id="total-cost" value="0" class="input-calculator__count">
+                        </div>
+                        <div class="input-calculator__unit">₽</div>
+                     </div>
+                     <div class="input-calculator__range">
+                        <input type="range" min="1000000" max="6000000" id="total-cost-range" value="0"
+                               class="input-calculator__slider">
+                     </div>
+                  </div>
+               </div>
+               <div class="calculator__item">
+                  <div class="calculator__label">
+                     Первоначальный взнос
+                  </div>
+                  <div class="calculator__input input-calculator">
+                     <div class="input-calculator__val">
+                        <div>
+                           <input type="number" id="an-initial-free" value="0" class="input-calculator__count">
+                           <span>₽</span>
+                        </div>
+                        <div class="input-calculator__unit input-calculator__unit--proc">
+                           <span>13%</span>
+                        </div>
+                     </div>
+                     <div class="input-calculator__range">
+                        <input type="range" min="10" max="60" id="an-initial-free-range" value="0"
+                               class="input-calculator__slider">
+                     </div>
+                  </div>
+               </div>
+               <div class="calculator__item">
+                  <div class="calculator__label">
+                     Срок лизинга
+                  </div>
+                  <div class="calculator__input input-calculator">
+                     <div class="input-calculator__val">
+                        <div>
+                           <input type="number" id="term-leasing" value="0" class="input-calculator__count">
+                        </div>
+                        <div class="input-calculator__unit">мес.</div>
+                     </div>
+                     <div class="input-calculator__range">
+                        <input type="range" min="1" max="60" id="term-leasing-range" value="0"
+                               class="input-calculator__slider">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="calculator__row">
+               <div class="calculator__item">
+                  <div class="calculator__label">
+                     Сумма договора лизинга
+                  </div>
+                  <div class="calculator__count calculator__count--sum">
+                     4 467 313 ₽
+                  </div>
+               </div>
+               <div class="calculator__item">
+                  <div class="calculator__label">
+                     Ежемесячный платеж от
+                  </div>
+                  <div class="calculator__count calculator__count--month">
+                     114 455 ₽
+                  </div>
+               </div>
+               <div class="calculator__item">
+                  <div class="calculator__btn btn">
+                     Оставить заявку
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <form action="#" method="post" class="form" id="form">
+      <div class="form__container container">
+         <h3 class="form__title title">
+            Онлайн-заявка
+         </h3>
+         <div class="form__subtitle">
+            Заполните форму, и мы вскоре свяжемся с вами, чтобы ответить на все вопросы
+         </div>
+         <div class="form__inputs inputs-form">
+            <div class="inputs-form__item">
+               <label for="tel" class="inputs-form__label">Телефон*</label>
+               <input
+                  type="tel"
+                  name="phone"
+                  id="tel"
+                  class="inputs-form__input _req">
+            </div>
+            <div class="inputs-form__item">
+               <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Имя"
+                  class="inputs-form__input _req">
+            </div>
+         </div>
+         <div class="form__agree agree-form">
+            <div class="agree-form__text">
+               Нажимая на кнопку «Оставить заявку», я даю согласие <a href="#" target="_blank">на обработку персональных
+               данных</a>
+            </div>
+            <button class="agree-form__btn">
+               <span>Оставить заявку</span>
+               <div></div>
+               <div></div>
+               <div></div>
+            </button>
+         </div>
+         <div class="form__footer footer-form">
+            <a href="https://www.whatsapp.com/" target="_blank" class="footer-form__link">
+               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M24.0001 14.7999C18.9273 14.7999 14.8001 18.9271 14.8001 23.9999C14.8001 25.5839 15.2093 27.1415 15.9853 28.5159L14.8149 32.6919C14.7765 32.8291 14.8137 32.9763 14.9129 33.0783C14.9893 33.1571 15.0933 33.1999 15.2001 33.1999C15.2321 33.1999 15.2645 33.1959 15.2961 33.1883L19.6545 32.1087C20.9853 32.8231 22.4841 33.1999 24.0001 33.1999C29.0729 33.1999 33.2001 29.0727 33.2001 23.9999C33.2001 18.9271 29.0729 14.7999 24.0001 14.7999ZM28.6281 27.2463C28.4313 27.7911 27.4873 28.2883 27.0337 28.3551C26.6265 28.4147 26.1113 28.4403 25.5457 28.2627C25.2029 28.1547 24.7629 28.0115 24.1993 27.7711C21.8301 26.7607 20.2829 24.4051 20.1645 24.2495C20.0465 24.0939 19.2001 22.9851 19.2001 21.8375C19.2001 20.6899 19.8101 20.1255 20.0269 19.8919C20.2437 19.6583 20.4993 19.5999 20.6569 19.5999C20.8145 19.5999 20.9717 19.6019 21.1097 19.6083C21.2549 19.6155 21.4497 19.5535 21.6413 20.0087C21.8381 20.4759 22.3105 21.6235 22.3689 21.7407C22.4281 21.8575 22.4673 21.9939 22.3889 22.1495C22.3105 22.3051 22.2713 22.4023 22.1529 22.5387C22.0345 22.6751 21.9049 22.8427 21.7985 22.9475C21.6801 23.0639 21.5573 23.1899 21.6949 23.4235C21.8325 23.6571 22.3065 24.4207 23.0089 25.0391C23.9109 25.8335 24.6721 26.0799 24.9081 26.1967C25.1441 26.3135 25.2821 26.2939 25.4197 26.1383C25.5573 25.9823 26.0101 25.4571 26.1673 25.2239C26.3245 24.9907 26.4821 25.0291 26.6989 25.1071C26.9157 25.1847 28.0769 25.7487 28.3129 25.8655C28.5489 25.9823 28.7065 26.0407 28.7657 26.1379C28.8249 26.2347 28.8249 26.7019 28.6281 27.2463Z"
+                     fill="#575757"/>
+                  <rect x="1" y="1" width="46" height="46" rx="23" stroke="#E7E7E7" stroke-width="2"/>
+               </svg>
+            </a>
+            <a href="https://web.telegram.org/" target="_blank" class="footer-form__link">
+               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20.6186 27.2189L28.7717 32.7684C29.7021 33.2414 30.3736 32.9965 30.6053 31.9726L33.924 17.5644C34.2638 16.3094 33.4048 15.7402 32.5147 16.1125L13.0272 23.0353C11.697 23.5269 11.7048 24.2106 12.7847 24.5153L17.7857 25.9533L29.3634 19.2239C29.9099 18.9186 30.4116 19.0827 29.9998 19.4194"
+                        fill="#575757"/>
+                  <rect x="1" y="1" width="46" height="46" rx="23" stroke="#F3F3F4" stroke-width="2"/>
+               </svg>
+            </a>
+         </div>
+      </div>
+      <div class="form__close">
+         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="24" fill="#F3F3F4"/>
+            <path d="M30.5996 17.4004L17.4003 30.5997" stroke="#828282" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+            <path d="M17.4004 17.4004L30.5997 30.5997" stroke="#828282" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+         </svg>
+      </div>
+   </form>
+</main>
+</body>
+
+</html>

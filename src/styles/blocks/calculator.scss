@@ -1,0 +1,170 @@
+.calculator {
+  padding-top: 100px;
+  @media (max-width: 1024px) {
+    padding-top: 80px;
+  }
+  @media (max-width: 320px) {
+    padding: 64px 20px 0;
+  }
+  &__title {
+    max-width: 753px;
+    color: #111111;
+    margin-bottom: 32px;
+    @media (max-width: 620px) {
+      font-size: 34px;
+      max-width: 100%;
+      line-height: 31px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__row {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
+    &:last-child {
+      .calculator__item {
+        @media (max-width: 1024px) {
+          flex-basis: 50%;
+        }
+        @media (max-width: 620px) {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__item {
+    max-width: 427px;
+    width: 100%;
+    margin-bottom: 50px;
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+    @media (max-width: 620px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 24px;
+    @media (max-width: 620px) {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__count {
+    font-family: 'Nekst';
+    font-size: 54px;
+    color: $main;
+    @media (max-width: 620px) {
+      font-size: 22px;
+    }
+  }
+
+  &__btn {
+    height: 68px;
+    color: #FFFFFF;
+    background: $orange;
+    @media (max-width: 1024px) {
+      width: 345px;
+    }
+    @media (max-width: 620px) {
+      width: 280px;
+      height: 60px;
+    }
+    @media (min-width: 769px) {
+      &:hover {
+        background: #111111;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.input-calculator {
+  &__val {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0 16px 24px;
+    background: #F3F3F4;
+    border-radius: 16px;
+    position: relative;
+    div:first-child {
+      display: flex;
+      align-items: center;
+      span {
+        font-family: 'Nekst';
+        font-size: 30px;
+        color: $main;
+        @media (max-width: 620px) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  &__count {
+    max-width: 140px;
+    background: transparent;
+    font-family: 'Nekst';
+    font-size: 30px;
+    color: $main;
+    @media (max-width: 620px) {
+      font-size: 22px;
+    }
+  }
+  &__unit {
+    font-family: 'Nekst';
+    font-size: 30px;
+    color: $main;
+    padding-right: 24px;
+    @media (max-width: 620px) {
+      font-size: 22px;
+    }
+  }
+  &__range {
+    position: relative;
+    z-index: 1;
+    height: 2px;
+    margin: 0 24px;
+    background: $orange;
+  }
+  &__slider {
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: $orange;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      cursor: ew-resize;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: $orange;
+      margin-top: -25px;
+    }
+  }
+  &__unit--proc {
+    width: 69px;
+    height: 54px;
+    padding: 15px;
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #EBEBEC;
+    border-radius: 16px;
+    font-family: 'Nekst';
+    font-size: 20px;
+  }
+}

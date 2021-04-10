@@ -1,0 +1,230 @@
+.form {
+  height: 765px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: -300vh;
+  z-index: 15;
+  background: #fff;
+  border-radius: 32px 32px 0px 0px;
+  overflow: visible;
+  transition: .4s linear;
+  &.show {
+    bottom: 0;
+  }
+  &._sending {
+    .agree-form__btn {
+      background: #000;
+      position: relative;
+      span {
+        opacity: 0;
+        transition: .1s linear;
+      }
+      div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #fff transparent transparent transparent;
+        &:nth-child(1) {
+          animation-delay: -0.45s;
+        }
+        &:nth-child(2) {
+          animation-delay: -0.3s;
+        }
+        &:nth-child(3) {
+          animation-delay: -0.15s;
+        }
+      }
+    }
+  }
+  &__container {
+    max-width: 685px;
+    padding-top: 160px;
+    @media (max-width: 768px) {
+      padding-top: 120px;
+    }
+
+    @media (max-width: 320px) {
+      padding: 24px 15px 0;
+    }
+  }
+  &__title {
+    color: #111111;
+    margin-bottom: 24px;
+    @media (max-width: 320px) {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 466px;
+    margin-bottom: 44px;
+    @media (max-width: 320px) {
+      font-size: 14px;
+      max-width: 240px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    @media (max-width: 320px) {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+  }
+  &__close {
+    position: absolute;
+    right: 48px;
+    top: 48px;
+    cursor: pointer;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: 320px) {
+      width: 24px;
+      height: 24px;
+      top: 24px;
+      right: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    height: 665px;
+  }
+  @media (max-width: 320px) {
+    height: 534px;
+  }
+}
+
+.inputs-form {
+  &__item {
+    flex: 0 1 311px;
+    max-width: 311px;
+    width: 100%;
+    position: relative;
+    @media (max-width: 320px) {
+      flex: 1 1 auto;
+      max-width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 12px;
+    position: absolute;
+    top: 8px;
+    left: 24px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0 24px;
+    height: 48px;
+    background: #F3F3F4;
+    border-radius: 16px;
+    color: #111111;
+    font-weight: 700;
+    border: 1px solid transparent;
+    transition: .2s linear;
+    &:focus {
+      border-color: $orange;
+      box-shadow: 0px 0px 6px 2px rgba(255, 149, 20, 0.6)
+    }
+    &::placeholder {
+      color: $main;
+    }
+    &._error {
+      border-color: red;
+      box-shadow: 0px 0px 6px 2px rgba(red, 0.6)
+    }
+    &#tel {
+      padding-top: 10px;
+    }
+  }
+}
+
+.agree-form {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #F3F3F4;
+  border-radius: 16px;
+  padding: 0 23px 0 33px;
+  margin-bottom: 32px;
+  @media (max-width: 320px) {
+    flex-wrap: wrap;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+    margin-bottom: 24px;
+    border: 0;
+  }
+  &__text {
+    max-width: 351px;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(17, 17, 17, 0.5);
+    a {
+      color: rgba(17, 17, 17, 1);
+    }
+    @media (max-width: 320px) {
+      max-width: 100%;
+      text-align: center;
+      order: 2;
+    }
+  }
+
+  &__btn {
+    width: 174px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $orange;
+    border-radius: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease-in;
+    color: #FFFFFF;
+    background: $orange;
+    @media (min-width: 769px) {
+      &:hover {
+        background: #111111;
+        color: #FFFFFF;
+      }
+    }
+    @media (max-width: 320px) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.footer-form {
+  display: flex;
+  justify-content: center;
+  &__link {
+    & + & {
+      margin-left: 15px;
+    }
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
